@@ -21,11 +21,60 @@ as the webpage loads.
 */
 
 const choices = ["Rock", "Paper", "Scissors"]; //creating an array of values to be selected from
-const randomChoice = Math.floor(Math.random() * choices.length); //generating one of the array elements randomly
+const randomChoice = Math.floor(Math.random() * choices.length); //generating one of the array elements randomly when the webpage loads
 console.log(randomChoice, choices[randomChoice]); 
 
 function playGame () {
-    let userChoice = document.getElementById().value;
+    document.getElementById("rock").onclick;
+    document.getElementById("paper").onclick;
+    document.getElementById("scissors").onclick;
+    let userChoice = document.button.$(this).value;
     console.log(userChoice);
 
+    if (userChoice === randomChoice) {
+        alert (`You selected ${userChoice} and the computer selected ${randomChoice}. It is a tie!`);
+        resetGame();
+        alert ("The game has been reset.");
+    }
+
+    else if (userChoice === "Rock" && randomChoice === "Paper") {
+        alert (`You lose! ${userChoice} gets covered up by ${randomChoice}`);
+        resetGame();
+        alert ("The game has been reset.");
+    }
+
+    else if (userChoice === "Rock" && randomChoice === "Scissors") {
+        alert (`You win! ${userChoice} smashes ${randomChoice}`);
+        resetGame();
+        alert ("The game has been reset.");
+    }
+
+    else if (userChoice === "Paper" && randomChoice === "Rock") {
+        alert (`You win! ${userChoice} covers up ${randomChoice}`);
+        resetGame();
+        alert ("The game has been reset.");
+    }
+
+    else if (userChoice === "Paper" && randomChoice === "Scissors") {
+        alert (`You lose! ${userChoice} gets cut by ${randomChoice}`);
+        resetGame();
+        alert ("The game has been reset.");
+    }
+
+    else if (userChoice === "Scissors" && randomChoice === "Rock") {
+        alert (`You lose! ${userChoice} gets smashed by ${randomChoice}`);
+        resetGame();
+        alert ("The game has been reset.");
+    }
+
+    else if (userChoice === "Scissors" && randomChoice === "Paper") {
+        alert (`You win! ${userChoice} cuts ${randomChoice}`);
+        resetGame();
+        alert ("The game has been reset.");
+    }
+}
+
+function resetGame () {
+    randomChoice = Math.floor(Math.random() * choices.length);
+    userChoice = document.button.$(this).value;
 }
