@@ -73,5 +73,5 @@ document.getElementById("button").onclick = function playGame () {
 
 function resetGame () {
     randomChoice = Math.floor(Math.random() * choices.length);
-    userChoice = document.button.$(this).value;
+    userChoice = document.getElementById("button").value;
 }
