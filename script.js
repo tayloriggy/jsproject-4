@@ -26,8 +26,8 @@ console.log(randomChoice, choices[randomChoice]);
 
 function playGame () {
 
-    let userChoice = document.getElementById(this.id);
-    userChoice = parseInt(document.getElementById(this.id)); //converting userChoice to a number so it has same type as randomChoice
+    let userChoice = document.getElementById("this.id");
+    userChoice = parseInt(document.getElementById("this.id")); //converting userChoice to a number so it has same type as randomChoice
 
     if (userChoice === randomChoice) {
         alert (`You selected ${userChoice} and the computer selected ${randomChoice}. It is a tie!`);
