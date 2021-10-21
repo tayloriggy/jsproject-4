@@ -24,9 +24,10 @@ const choices = ["Rock", "Paper", "Scissors"]; //creating an array of values to 
 const randomChoice = Math.floor(Math.random() * choices.length); //generating one of the array elements randomly when the webpage loads
 console.log(randomChoice, choices[randomChoice]); 
 
-document.getElementById("button").onclick = function playGame () {
-    
-    let userChoice = document.getElementById("button").value;
+function playGame () {
+
+    let userChoice = document.getElementById(this.id);
+    userChoice = parseInt(document.getElementById(this.id)); //converting userChoice to a number so it has same type as randomChoice
 
     if (userChoice === randomChoice) {
         alert (`You selected ${userChoice} and the computer selected ${randomChoice}. It is a tie!`);
