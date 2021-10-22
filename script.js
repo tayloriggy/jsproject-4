@@ -21,52 +21,52 @@ as the webpage loads.
 */
 
 const choices = ["Rock", "Paper", "Scissors"]; //creating an array of values to be selected from
-const randomChoice = Math.floor(Math.random() * choices.length); //generating one of the array elements randomly when the webpage loads
-console.log(randomChoice, choices[randomChoice]); 
+let randomChoice = Math.floor(Math.random() * choices.length); //generating one of the array elements randomly when the webpage loads
+console.log(randomChoice, choices[randomChoice]); //displaying the picked value by computer
 
-function playGame () {
+function playGame (choiceId) {
 
-    let userChoice = document.getElementById("this.id");
-    userChoice = parseInt(document.getElementById("this.id")); //converting userChoice to a number so it has same type as randomChoice
+    document.getElementById(choiceId);
+    console.log(choiceId); //displaying the id of the button clicked
 
-    if (userChoice === randomChoice) {
-        alert (`You selected ${userChoice} and the computer selected ${randomChoice}. It is a tie!`);
+   if (choiceId === "Rock" && randomChoice, choices[randomChoice] === "Paper") {
+        alert (`You lose! ${choiceId} gets covered up by ${randomChoice, choices[randomChoice]}`);
         resetGame();
         alert ("The game has been reset.");
     }
 
-    else if (userChoice === "Rock" && randomChoice === "Paper") {
-        alert (`You lose! ${userChoice} gets covered up by ${randomChoice}`);
+    else if (choiceId === "Rock" && randomChoice, choices[randomChoice] === "Scissors") {
+        alert (`You win! ${choiceId} smashes ${randomChoice, choices[randomChoice]}`);
         resetGame();
         alert ("The game has been reset.");
     }
 
-    else if (userChoice === "Rock" && randomChoice === "Scissors") {
-        alert (`You win! ${userChoice} smashes ${randomChoice}`);
+    else if (choiceId === "Paper" && randomChoice, choices[randomChoice] === "Rock") {
+        alert (`You win! ${choiceId} covers up ${randomChoice, choices[randomChoice]}`);
         resetGame();
         alert ("The game has been reset.");
     }
 
-    else if (userChoice === "Paper" && randomChoice === "Rock") {
-        alert (`You win! ${userChoice} covers up ${randomChoice}`);
+    else if (choiceId === "Paper" && randomChoice, choices[randomChoice] === "Scissors") {
+        alert (`You lose! ${choiceId} gets cut by ${randomChoice, choices[randomChoice]}`);
         resetGame();
         alert ("The game has been reset.");
     }
 
-    else if (userChoice === "Paper" && randomChoice === "Scissors") {
-        alert (`You lose! ${userChoice} gets cut by ${randomChoice}`);
+    else if (choiceId === "Scissors" && randomChoice, choices[randomChoice] === "Rock") {
+        alert (`You lose! ${choiceId} gets smashed by ${randomChoice, choices[randomChoice]}`);
         resetGame();
         alert ("The game has been reset.");
     }
 
-    else if (userChoice === "Scissors" && randomChoice === "Rock") {
-        alert (`You lose! ${userChoice} gets smashed by ${randomChoice}`);
+    else if (choiceId === "Scissors" && randomChoice, choices[randomChoice] === "Paper") {
+        alert (`You win! ${choiceId} cuts ${randomChoice, choices[randomChoice]}`);
         resetGame();
         alert ("The game has been reset.");
     }
 
-    else if (userChoice === "Scissors" && randomChoice === "Paper") {
-        alert (`You win! ${userChoice} cuts ${randomChoice}`);
+    else if (choiceId === randomChoice, choices[randomChoice]) {
+        alert (`You selected ${choiceId} and the computer selected ${randomChoice, choices[randomChoice]}. It is a tie!`);
         resetGame();
         alert ("The game has been reset.");
     }
@@ -74,5 +74,5 @@ function playGame () {
 
 function resetGame () {
     randomChoice = Math.floor(Math.random() * choices.length);
-    userChoice = document.getElementById("button").value;
+    console.log(randomChoice, choices[randomChoice]);
 }
