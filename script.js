@@ -10,7 +10,7 @@ Requirements:
 Steps:
 1. Define a variable that will select randomly from one of three string values (rock, paper, and scissors). This will occur as soon
 as the webpage loads.
-2. Define three variables named: Rock, Paper, Scissors
+2. Define an array that holds string values of "Rock", "Paper", "Scissors" and store it in a variable.
 3. Initiate an onclick event handler so that each time a button is clicked, a JS function is ran.
 4. Define a function called Function playGame ()
 5. Lable the 3 buttons Rock, Paper, Scissors
