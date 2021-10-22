@@ -34,49 +34,41 @@ function playGame (choiceId) {
 
     if (choiceId === choices[randomChoice]) //if user choice is same as computer choice
     {
-        alert ("Tie!");
-        resetGame();
-        alert ("The game has been reset.");
+        cleanUp("Tie!");
     }
 
    else if (choiceId === "Rock" && choices[randomChoice] === "Paper") {
-        alert ("You lose. Paper covers rock.");
-        resetGame();
-        alert ("The game has been reset.");
+        cleanUp("You lose. Paper covers rock.");
     }
 
     else if (choiceId === "Rock" && choices[randomChoice] === "Scissors") {
-        alert ("You win! Rock smashes scissors.");
-        resetGame();
-        alert ("The game has been reset.");
+        cleanUp("You win! Rock smashes scissors.");
     }
 
     else if (choiceId === "Paper" && choices[randomChoice] === "Rock") {
-        alert ("You win! Paper covers rock.");
-        resetGame();
-        alert ("The game has been reset.");
+        cleanUp("You win! Paper covers rock.");
     }
 
     else if (choiceId === "Paper" && choices[randomChoice] === "Scissors") {
-        alert ("You lose! Scissors cuts paper.");
-        resetGame();
-        alert ("The game has been reset.");
+        cleanUp("You lose! Scissors cuts paper.");
     }
 
     else if (choiceId === "Scissors" && choices[randomChoice] === "Rock") {
-        alert ("You lose! Rock smashes scissors.");
-        resetGame();
-        alert ("The game has been reset.");
+        cleanUp("You lose! Rock smashes scissors.");
     }
 
     else if (choiceId === "Scissors" && choices[randomChoice] === "Paper") {
-        alert ("You win! Scissors cuts paper.");
-        resetGame();
-        alert ("The game has been reset.");
+        cleanUp("You win! Scissors cuts paper.");
     }
 }
 
 function resetGame () {
     randomChoice = Math.floor(Math.random() * choices.length); //computer picks between rock, paper, or scissors randomly again
     console.log(choices[randomChoice]); //displays random pick again
+}
+
+function cleanUp (alertText) {
+    alert(alertText);
+    resetGame();
+    alert("The game has been reset");
 }
