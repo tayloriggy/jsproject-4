@@ -18,6 +18,8 @@ as the webpage loads.
 7. After each display, reset the game.
 8. Use if else conditions.
 
+From index.html lines 10-12, (this.id) literally gets the id of clicked element
+
 */
 
 const choices = ["Rock", "Paper", "Scissors"]; //creating an array of values to be selected from
