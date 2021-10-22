@@ -32,19 +32,8 @@ function playGame (choiceId) {
     document.getElementById(choiceId); //getting the id of clicked element
     console.log(choiceId); //displaying the id of the clicked element
 
-    if (choiceId === "Rock" && choices[randomChoice] === "Rock") {
-        alert ("Tie!");
-        resetGame();
-        alert ("The game has been reset.");
-    }
-
-    else if (choiceId === "Paper" && choices[randomChoice] === "Paper") {
-        alert ("Tie!");
-        resetGame();
-        alert ("The game has been reset.");
-    }
-
-    else if (choiceId === "Scissors" && choices[randomChoice] === "Scissors") {
+    if (choiceId === choices[randomChoice]) //if user choice is same as computer choice
+    {
         alert ("Tie!");
         resetGame();
         alert ("The game has been reset.");
