@@ -22,57 +22,70 @@ as the webpage loads.
 
 const choices = ["Rock", "Paper", "Scissors"]; //creating an array of values to be selected from
 let randomChoice = Math.floor(Math.random() * choices.length); //generating one of the array elements randomly when the webpage loads
-console.log(randomChoice, choices[randomChoice]); //displaying the picked value by computer
+console.log(choices[randomChoice]); //displaying the picked value by computer, the index is set to randomChoice variable that is randomly
+// picking one of the index values within the array of choices
 
 function playGame (choiceId) {
 
-    document.getElementById(choiceId);
-    console.log(choiceId); //displaying the id of the button clicked
+    document.getElementById(choiceId); //getting the id of clicked element
+    console.log(choiceId); //displaying the id of the clicked element
 
-   if (choiceId === "Rock" && randomChoice, choices[randomChoice] === "Paper") {
-        alert (`You lose! ${choiceId} gets covered up by ${randomChoice, choices[randomChoice]}`);
+    if (choiceId === "Rock" && choices[randomChoice] === "Rock") {
+        alert ("Tie!");
         resetGame();
         alert ("The game has been reset.");
     }
 
-    else if (choiceId === "Rock" && randomChoice, choices[randomChoice] === "Scissors") {
-        alert (`You win! ${choiceId} smashes ${randomChoice, choices[randomChoice]}`);
+    else if (choiceId === "Paper" && choices[randomChoice] === "Paper") {
+        alert ("Tie!");
         resetGame();
         alert ("The game has been reset.");
     }
 
-    else if (choiceId === "Paper" && randomChoice, choices[randomChoice] === "Rock") {
-        alert (`You win! ${choiceId} covers up ${randomChoice, choices[randomChoice]}`);
+    else if (choiceId === "Scissors" && choices[randomChoice] === "Scissors") {
+        alert ("Tie!");
         resetGame();
         alert ("The game has been reset.");
     }
 
-    else if (choiceId === "Paper" && randomChoice, choices[randomChoice] === "Scissors") {
-        alert (`You lose! ${choiceId} gets cut by ${randomChoice, choices[randomChoice]}`);
+   else if (choiceId === "Rock" && choices[randomChoice] === "Paper") {
+        alert ("You lose. Paper covers rock.");
         resetGame();
         alert ("The game has been reset.");
     }
 
-    else if (choiceId === "Scissors" && randomChoice, choices[randomChoice] === "Rock") {
-        alert (`You lose! ${choiceId} gets smashed by ${randomChoice, choices[randomChoice]}`);
+    else if (choiceId === "Rock" && choices[randomChoice] === "Scissors") {
+        alert ("You win! Rock smashes scissors.");
         resetGame();
         alert ("The game has been reset.");
     }
 
-    else if (choiceId === "Scissors" && randomChoice, choices[randomChoice] === "Paper") {
-        alert (`You win! ${choiceId} cuts ${randomChoice, choices[randomChoice]}`);
+    else if (choiceId === "Paper" && choices[randomChoice] === "Rock") {
+        alert ("You win! Paper covers rock.");
         resetGame();
         alert ("The game has been reset.");
     }
 
-    else if (choiceId === randomChoice, choices[randomChoice]) {
-        alert (`You selected ${choiceId} and the computer selected ${randomChoice, choices[randomChoice]}. It is a tie!`);
+    else if (choiceId === "Paper" && choices[randomChoice] === "Scissors") {
+        alert ("You lose! Scissors cuts paper.");
+        resetGame();
+        alert ("The game has been reset.");
+    }
+
+    else if (choiceId === "Scissors" && choices[randomChoice] === "Rock") {
+        alert ("You lose! Rock smashes scissors.");
+        resetGame();
+        alert ("The game has been reset.");
+    }
+
+    else if (choiceId === "Scissors" && choices[randomChoice] === "Paper") {
+        alert ("You win! Scissors cuts paper.");
         resetGame();
         alert ("The game has been reset.");
     }
 }
 
 function resetGame () {
-    randomChoice = Math.floor(Math.random() * choices.length);
-    console.log(randomChoice, choices[randomChoice]);
+    randomChoice = Math.floor(Math.random() * choices.length); //computer picks between rock, paper, or scissors randomly again
+    console.log(choices[randomChoice]); //displays random pick again
 }
